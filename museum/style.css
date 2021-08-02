@@ -18,7 +18,6 @@ body {
   font-size: 22px;
   font-family: Roboto, sans-serif;
   color: var(--color-white);
-  box-sizing: border-box;
 }
 
 ul,
@@ -193,7 +192,6 @@ a {
   cursor: pointer;
 }
 
-/* VISITING SECTION */
 .visiting-inner {
   display: flex;
   flex-wrap: wrap;
@@ -202,7 +200,7 @@ a {
 }
 .visiting__card-wrapper {
   flex-basis: 440px;
-}  
+}
 
 .visiting__card-picture {
   display: block;
@@ -220,8 +218,7 @@ a {
   line-height: 35px;
   text-transform: uppercase;
   letter-spacing: 5px;
-  color: var(--color-black);  
-  
+  color: var(--color-black);
 }
 
 .visiting__card-title::after {
@@ -240,7 +237,7 @@ a {
   font-weight: 100;
   font-size: 22px;
   line-height: 26px;
-  color: var(--color-black);  
+  color: var(--color-black);
   margin-bottom: 10px;
 }
 
@@ -248,7 +245,7 @@ a {
   font-weight: 100;
   font-size: 18px;
   line-height: 21px;
-  color: var(--color-black);  
+  color: var(--color-black);
 }
 
 .visiting__card-wrapper:hover .visiting__card-title::after {
@@ -278,19 +275,19 @@ a {
   font-style: normal;
   font-weight: 300;
   font-size: 22px;
-  line-height: 39px;  
+  line-height: 39px;
   max-width: 659px;
   margin-bottom: 25px;
 }
 
 .section-video {
   min-height: 844px;
-  padding-top: 90px; 
+  padding-top: 90px;
 }
 
 .video-inner {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 .video {
@@ -300,11 +297,11 @@ a {
 
 .video__text {
   max-width: 720px;
-  color: var(--color-black);  
+  color: var(--color-black);
   font-style: normal;
   font-weight: 300;
   font-size: 22px;
-  line-height: 40px; 
+  line-height: 40px;
 }
 
 .video-title {
@@ -313,7 +310,7 @@ a {
 }
 
 .section-tickets {
-  min-height: 743px;  
+  min-height: 743px;
 }
 
 .tickets__wrapper {
@@ -322,8 +319,139 @@ a {
 }
 
 .tickets-title {
-border-bottom: 3px solid var(--color-dark-red);
-margin-bottom: 75px;
+  border-bottom: 3px solid var(--color-dark-red);
+  margin-bottom: 75px;
+}
+
+.tickets__form {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 660px;
+}
+
+.form__subtitle {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  margin-bottom: 50px;
+}
+
+.radio-list__item {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  padding-bottom: 49px;
+}
+
+.radio-list__input {
+  margin-right: 23px;
+}
+
+.radio-list__item:hover,
+.radio-list__item:focus {
+  color: var(--color-gold);
+}
+
+.radio-list__input,
+.radio-list__label {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.radio-list__input {
+  appearance: none;
+  width: 17px;
+  min-width: 17px;
+  height: 17px;
+  margin-right: 23px;
+  padding: 3px;
+  border: 2px solid var(--color-white);
+  border-radius: 50%;
+}
+
+.radio-list__input:checked {
+  background-color: var(--color-white);
+  background-position: center;
+  background-clip: content-box;
+}
+
+.tickets-count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  height: 50px;
+  padding: 0 14px;
+  border: 3px solid var(--color-white);
+  margin-bottom: 35px;
+}
+
+.form__age {
+  margin-bottom: 14px;
+}
+
+.form__tickets-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.form__tickets-amount h3 {
+  margin-bottom: 11px;
+}
+
+.tickets-count__button,
+.tickets-count__summary {
+  font-size: inherit;
+  font-weight: inherit;
+  color: #ffffff;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.tickets-count__summary::-webkit-inner-spin-button,
+.tickets-count__summary::-webkit-outer-spin-button {
+  display: none;
+}
+
+.tickets-count__button {
+  font-size: 32px;
+  line-height: 37px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tickets-count__summary {
+  text-align: center;
+}
+
+
+
+.form__total {
+  padding-top: 10px;
+  margin-bottom: 50px;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 1.65px;
+}
+
+.button-buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 175px;
+  height: 50px;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  background-color: var(--color-white);
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .contacts-title {
@@ -335,8 +463,8 @@ margin-bottom: 75px;
   justify-content: space-between;
 }
 
-.contacts__place-name {
-color: var(--color-black);
+.contacts__name {
+  color: var(--color-black);
 }
 
 .contacts__list {
