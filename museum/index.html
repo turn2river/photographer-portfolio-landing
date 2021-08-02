@@ -96,18 +96,80 @@
       </section>
       <section class="section section-video">
         <div class="container">
-          <img src="./assets/img/Frame.jpg" alt="">
+          <img class="video" src="./assets/img/Frame.jpg" alt="">
           <div class="video-inner">
-            <h2 class="section-title--gold">Video Journey</h2>
+            <h2 class="section-title--gold video-title">Video Journey</h2>
             <p class="video__text">Enter and visit one of&nbsp;the most famous museums in&nbsp;the world and enjoy masterpieces such as&nbsp;Mona Lisa or&nbsp;Hammurabi&rsquo;s Code</p>
           </div>
         </div>
       </section>
-      <section class="section section-dark">
-        <div class="container"></div>
+      <section class="section section-dark section-tickets">
+        <div class="container">
+          <h2 class="section-title tickets-title">Buy Tickets</h2>
+          <div class="tickets__wrapper">
+            <img class="tickets__picture" src="./assets/img/TicketsPicture.jpg" alt="">
+            <div class="tickets__form">
+              <div class="form__tickets-type">
+                <h3 class="form__subtitle">Ticket Type</h3>
+                <ul class="form__radio-list">
+                  <li class="radio-list__item">
+                    <label class="radio-list__label">
+                      <input class="radio-list__input" type="radio" name="ticket-type" checked>Permanent exhibition
+                    </label>
+                  </li>
+                  <li class="radio-list__item">
+                    <label class="radio-list__label">
+                      <input class="radio-list__input" type="radio" name="ticket-type">Temporary exhibition
+                    </label>
+                  </li>
+                  <li class="radio-list__item">
+                    <label class="radio-list__label">
+                      <input class="radio-list__input" type="radio" name="ticket-type">Combined Admission
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="form__tickets-amount">
+                <h3 class="form__subtitle">Amount</h3>
+                <div class="form__ticket-count">
+                  <p class="form__age">Basic 18+</p>
+                  <div class="ticket-count">
+                    <button class="ticket-count__button" type="button" onclick="this.nextElementSibling.value--">–</button>
+                    <input class="ticket-count__summary" type="number" value="0" min="0" max="100" aria-label="basic-ticket-amount">
+                    <button class="ticket-count__button" type="button" onclick="this.previousElementSibling.value++">+</button>
+                  </div>
+                </div>
+                <div class="form__ticket-count">
+                  <p class="form__age">Senior 65+</p>
+                  <div class="ticket-count">
+                    <button class="ticket-count__button" type="button" onclick="this.nextElementSibling.value--">–</button>
+                    <input class="ticket-count__summary" type="number" value="0" min="0" max="100" aria-label="senior-ticket-amount">
+                    <button class="ticket-count__button" type="button" onclick="this.previousElementSibling.value++">+</button>
+                  </div>
+                </div>
+                <p class="form__total">Total €<span>220</span></p>
+                <button class="buy-btn">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="section">
-        <div class="container"></div>
+      <section class="section section-contacts">
+        <div class="container">
+          <h2 class="section-title--gold contacts-title">Contacts</h2>
+          <div class="contacts-inner">
+            <div class="contacts__info">
+              <h3 class="contacts__place-name">Palais Royal</h3>
+              <h3 class="contacts__place-name">Musee du Louvre</h3>
+              <ul class="contacts__list">
+                <li class="contacts__item">address: 75001 Paris, France</li>
+                <li class="contacts__item">phone: +33(0) 1 40 20 50 50</li>
+                <li class="contacts__item">mail:info@louvre.fr</li>
+              </ul>
+            </div>
+            <img class="contacts__map" src="./assets/img/map.jpg" alt="" >
+          </div>
+        </div>
       </section>
     </main>
     <footer class="section-dark">

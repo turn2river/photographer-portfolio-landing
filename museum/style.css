@@ -18,6 +18,7 @@ body {
   font-size: 22px;
   font-family: Roboto, sans-serif;
   color: var(--color-white);
+  box-sizing: border-box;
 }
 
 ul,
@@ -63,7 +64,7 @@ a {
   letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--color-white);
-  padding-bottom: 26px;
+  padding-bottom: 25px;
 }
 
 .section-title--gold {
@@ -75,18 +76,8 @@ a {
   letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--color-gold);
-  padding-bottom: 27px;
-}
-
-.section-title--gold::after,
-.section-title::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: var(--color-dark-red);
+  padding-bottom: 25px;
+  border-bottom: 3px solid var(--color-dark-red);
 }
 
 .container {
@@ -206,53 +197,58 @@ a {
 .visiting-inner {
   display: flex;
   flex-wrap: wrap;
-  gap: 75px 60px;
+  gap: 76px 60px;
   margin-top: 75px;
 }
 .visiting__card-wrapper {
   flex-basis: 440px;
+}  
+
+.visiting__card-picture {
+  display: block;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 25px;
 }
 
 .visiting__card-title {
   position: relative;
-  font-family: Forum;
-  font-style: normal;
-  font-weight: 100;
+  font-family: "Forum", serif;
+  margin-bottom: 22px;
   font-size: 32px;
+  font-weight: 400;
   line-height: 35px;
-  letter-spacing: 5px;
   text-transform: uppercase;
-  color: var(--color-black);
-  padding-top: 20px;
-  padding-bottom: 11px;
+  letter-spacing: 5px;
+  color: var(--color-black);  
+  
 }
 
 .visiting__card-title::after {
   position: absolute;
   content: "";
-  bottom: 0;
+  bottom: -10px;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 2px;
   width: 300px;
   background-color: var(--color-dark-red);
   transition: all 0.5s;
 }
 
 .visiting__card-subtitle {
-  font-weight: 200;
+  font-weight: 100;
   font-size: 22px;
   line-height: 26px;
-  color: var(--color-black);
-  padding-top: 13px;
+  color: var(--color-black);  
+  margin-bottom: 10px;
 }
 
 .visiting__card-text {
-  font-weight: 200;
+  font-weight: 100;
   font-size: 18px;
   line-height: 21px;
-  color: var(--color-black);
-  padding-top: 10px;
+  color: var(--color-black);  
 }
 
 .visiting__card-wrapper:hover .visiting__card-title::after {
@@ -264,15 +260,12 @@ a {
   justify-content: space-between;
 }
 
-.explore__text-block {
-}
-
 .explore-wrapper {
   flex-basis: 660px;
 }
 
 .explore-wrapper h2 {
-  margin-bottom: 49px;
+  margin-bottom: 75px;
 }
 
 .explore_picture {
@@ -285,21 +278,24 @@ a {
   font-style: normal;
   font-weight: 300;
   font-size: 22px;
-  line-height: 39px;
-  padding-top: 25px;
+  line-height: 39px;  
   max-width: 659px;
+  margin-bottom: 25px;
 }
 
 .section-video {
   min-height: 844px;
-  padding-top: 90px;
-  margin-bottom: 40px;
+  padding-top: 90px; 
 }
 
 .video-inner {
   display: flex;
-  justify-content: space-between;
-  padding-top: 39px;
+  justify-content: space-between; 
+}
+
+.video {
+  margin-bottom: 35px;
+  object-fit: cover;
 }
 
 .video__text {
@@ -308,6 +304,41 @@ a {
   font-style: normal;
   font-weight: 300;
   font-size: 22px;
-  line-height: 40px;
- 
+  line-height: 40px; 
+}
+
+.video-title {
+  border-bottom: 0;
+  padding: 0;
+}
+
+.section-tickets {
+  min-height: 743px;  
+}
+
+.tickets__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tickets-title {
+border-bottom: 3px solid var(--color-dark-red);
+margin-bottom: 75px;
+}
+
+.contacts-title {
+  margin-bottom: 113px;
+}
+
+.contacts-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__place-name {
+color: var(--color-black);
+}
+
+.contacts__list {
+  color: var(--color-black);
 }
