@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet" />
@@ -10,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <title>Museum</title>
   </head>
   <body>
     <header class="header section-dark">
@@ -18,11 +17,11 @@
         <a class="header__logo" href="#"><h1>Louvre</h1></a>
         <nav class="header__menu">
           <ul class="header__menu-list">
-            <li class="header__menu-item"><a href="#" class="header__menu-link">Visiting</a></li>
-            <li class="header__menu-item"><a href="#" class="header__menu-link">Explore</a></li>
-            <li class="header__menu-item"><a href="#" class="header__menu-link">Video</a></li>
-            <li class="header__menu-item"><a href="#" class="header__menu-link">Tickets</a></li>
-            <li class="header__menu-item"><a href="#" class="header__menu-link">Contacts</a></li>
+            <li class="header__menu-item"><a href="#visiting" class="header__menu-link">Visiting</a></li>
+            <li class="header__menu-item"><a href="#explore" class="header__menu-link">Explore</a></li>
+            <li class="header__menu-item"><a href="#video" class="header__menu-link">Video</a></li>
+            <li class="header__menu-item"><a href="#tickets" class="header__menu-link">Tickets</a></li>
+            <li class="header__menu-item"><a href="#contacts" class="header__menu-link">Contacts</a></li>
           </ul>
         </nav>
       </div>
@@ -39,42 +38,42 @@
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section"  id="visiting">
         <div class="container">
           <h2 class="section-title--gold">Virtual tour</h2>
           <div class="visiting-inner">
             <a href="#" class="visiting__card-wrapper">
-              <img class="visiting__card-picture" src="./assets/img/RoyalPalace.jpg" />
+              <img class="visiting__card-picture" src="./assets/img/RoyalPalace.jpg" alt="Royal Palace"/>
               <h3 class="visiting__card-title">Royal Palace</h3>
               <p class="visiting__card-subtitle">360° Virtual Tour</p>
               <p class="visiting__card-text">Google Street Panorama View</p>
             </a>
             <a href="#" class="visiting__card-wrapper">
-              <img class="visiting__card-picture" src="./assets/img/DenonWing.jpg" />
+              <img class="visiting__card-picture" src="./assets/img/DenonWing.jpg" alt="peter paul rubens council of the gods"/>
               <h3 class="visiting__card-title">Denon Wing</h3>
               <p class="visiting__card-subtitle">360° Virtual Tour</p>
               <p class="visiting__card-text">Google Street Panorama View</p>
             </a>
             <a href="#" class="visiting__card-wrapper">
-              <img class="visiting__card-picture" src="./assets/img/ColonnadePerrault.jpg" />
+              <img class="visiting__card-picture" src="./assets/img/ColonnadePerrault.jpg" alt="panthéon"/>
               <h3 class="visiting__card-title">Colonnade Perrault</h3>
               <p class="visiting__card-subtitle">360° Virtual Tour</p>
               <p class="visiting__card-text">Google Street Panorama View</p>
             </a>
             <a href="#" class="visiting__card-wrapper">
-              <img class="visiting__card-picture" src="./assets/img/GreekHall.jpg" />
+              <img class="visiting__card-picture" src="./assets/img/GreekHall.jpg" alt="Sculpture, Louvre"/>
               <h3 class="visiting__card-title">Greek hall</h3>
               <p class="visiting__card-subtitle">360° Virtual Tour</p>
               <p class="visiting__card-text">Google Street Panorama View</p>
             </a>
             <a href="#" class="visiting__card-wrapper">
-              <img class="visiting__card-picture" src="./assets/img/MonaLisa.jpg" />
+              <img class="visiting__card-picture" src="./assets/img/MonaLisa.jpg" alt="Mona Lisa"/>
               <h3 class="visiting__card-title">Mona Lisa</h3>
               <p class="visiting__card-subtitle">360° Virtual Tour</p>
               <p class="visiting__card-text">Google Street Panorama View</p>
             </a>
             <a href="#" class="visiting__card-wrapper">
-              <img class="visiting__card-picture" src="./assets/img/NightPalace.jpg" />
+              <img class="visiting__card-picture" src="./assets/img/NightPalace.jpg" alt="Christ in Glory with the Saints" />
               <h3 class="visiting__card-title">Night Palace</h3>
               <p class="visiting__card-subtitle">360° Virtual Tour</p>
               <p class="visiting__card-text">Google Street Panorama View</p>
@@ -82,32 +81,32 @@
           </div>
         </div>
       </section>
-      <section class="section section-explore-dark">
+      <section class="section section-explore-dark" id="explore">
         <div class="container explore-inner">
           <div class="explore-wrapper">
             <h2 class="section-title explore-title">Picture Explore</h2>
             <p class="explore__text">Las Meninas is&nbsp;a&nbsp;1656 painting by&nbsp;Diego Vel&aacute;zquez, the leading artist of&nbsp;the Spanish Golden Age.</p>
-            <p class="explore__text">It&nbsp;was cleaned in&nbsp;1984 to&nbsp;remove a&nbsp;&laquo;yellow veil&raquo; of&nbsp;dust that had gathered since the previous restoration in&nbsp;the 19th century.</p>
+            <p class="explore__text">It&nbsp;was cleaned in&nbsp;1984 to&nbsp;remove a&nbsp;<span class="link-in-text">&laquo;yellow veil&raquo;</span> of&nbsp;dust that had gathered since the previous restoration in&nbsp;the 19th century.</p>
             <p class="explore__text">The cleaning provoked furious protests, not because the picture had been damaged in&nbsp;any way, but because it&nbsp;looked different.</p>
           </div>
-          <img class="explore_picture" src="./assets/img/PictureExplore.jpg" alt="" />
+          <img class="explore__picture" src="./assets/img/PictureExplore.jpg" alt="Las Meninas" />
           
         </div>
       </section>
-      <section class="section section-video">
-        <div class="container">
-          <img class="video" src="./assets/img/Frame.jpg" alt="">
-          <div class="video-inner">
+      <section class="section section-video" id="video">
+        <div class="container">         
+          <img class="video" src="./assets/img/Frame.jpg" alt="video_bg">         
+          <div class="video__text-block">
             <h2 class="section-title--gold video-title">Video Journey</h2>
             <p class="video__text">Enter and visit one of&nbsp;the most famous museums in&nbsp;the world and enjoy masterpieces such as&nbsp;Mona Lisa or&nbsp;Hammurabi&rsquo;s Code</p>
           </div>
         </div>
       </section>
-      <section class="section section-dark section-tickets">
+      <section class="section section-dark section-tickets" id="tickets">
         <div class="container">
           <h2 class="section-title tickets-title">Buy Tickets</h2>
           <div class="tickets__wrapper">
-            <img class="tickets__picture" src="./assets/img/TicketsPicture.jpg" alt="">
+            <img class="tickets__picture" src="./assets/img/TicketsPicture.jpg" alt="venus aeneas shield">
             <div class="tickets__form">
               <div class="form__tickets-type">
                 <h3 class="form__subtitle">Ticket Type</h3>
@@ -154,7 +153,7 @@
           </div>
         </div>
       </section>
-      <section class="section section-contacts">
+      <section class="section section-contacts" id="contacts">
         <div class="container">
           <h2 class="section-title--gold contacts-title">Contacts</h2>
           <div class="contacts-inner">
@@ -163,8 +162,8 @@
               <h3 class="contacts__name">Musee du Louvre</h3>
               <ul class="contacts__list">
                 <li class="contacts__item">address: 75001 Paris, France</li>
-                <li class="contacts__item">phone: +33(0) 1 40 20 50 50</li>
-                <li class="contacts__item">mail:info@louvre.fr</li>
+                <li class="contacts__item"><a href="tel:" class="contacts__number"> phone: +33(0) 1 40 20 50 50</a></li>
+                <li class="contacts__item"><a href="mailto:">mail: info@louvre.fr</a></li>
               </ul>
             </div>
             <img class="contacts__map" src="./assets/img/map.jpg" alt="" >
@@ -175,7 +174,7 @@
     <footer class="section-dark section-footer">
       <div class="container">
        <div class="footer-inner">
-          <a class="header__logo" href="#"><h1>Louvre</h1></a>
+          <a class="footer__logo" href="#"><h1>Louvre</h1></a>
           <nav class="footer__nav">
             <ul class="footer-menu">
               <li class="footer-menu__item">
@@ -220,5 +219,6 @@
        </div>
       </div>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>

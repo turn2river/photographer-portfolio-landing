@@ -29,6 +29,10 @@ a {
   text-decoration: none;
 }
 
+.link-in-text {
+  color: var(--color-gold);
+}
+
 .section {
   padding: 75px 0;
 }
@@ -51,7 +55,7 @@ a {
   letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--color-white);
-  padding-bottom: 26px;
+  margin-bottom: 26px;
 }
 
 .section-title {
@@ -92,6 +96,7 @@ a {
   color: var(--color-white);
   background-color: var(--color-black);
   line-height: 50px;
+  padding: 75px 0;
 }
 
 .header__logo {
@@ -99,6 +104,7 @@ a {
   background-repeat: no-repeat;
   background-position: left center;
   padding-left: 70px;
+  transition: all 0.3s;
 }
 
 .header__logo:hover {
@@ -127,7 +133,7 @@ a {
 }
 
 .header__menu-item {
-  padding: 75px 38px;
+  padding: 0 38px;
 }
 
 .header__menu-link {
@@ -135,6 +141,7 @@ a {
   font-weight: 100;
   line-height: 50px;
   letter-spacing: 2px;
+  transition: all 0.3s;
 }
 
 .header__menu-item :hover {
@@ -168,7 +175,7 @@ a {
   font-size: 28px;
   line-height: 33px;
   letter-spacing: 2px;
-  padding: 0 0 76px 0;
+  margin: 0 0 76px 0;
 }
 
 .welcome__button {
@@ -184,7 +191,7 @@ a {
   background: var(--color-dark-red);
   border-radius: 10px;
   color: var(--color-white);
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
 .welcome__button:hover {
@@ -211,7 +218,7 @@ a {
 
 .visiting__card-title {
   position: relative;
-  font-family: "Forum", serif;
+  font-family: Forum, serif;
   margin-bottom: 22px;
   font-size: 32px;
   font-weight: 400;
@@ -297,7 +304,7 @@ a {
   padding-top: 90px;
 }
 
-.video-inner {
+.video__text-block {
   display: flex;
   justify-content: space-between;
 }
@@ -510,11 +517,19 @@ a {
   margin-bottom: 20px;
 }
 
+.contacts__item a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+.contacts__item a:hover {
+  color: var(--color-gold);
+}
 .footer-inner {
   display: flex;
   justify-content: space-between;
   padding-top: 75px;
-  align-items: flex-start;  
+  align-items: flex-start;
 }
 
 .section-footer {
@@ -527,11 +542,34 @@ a {
   margin-right: 215px;
 }
 
+.footer__logo {
+  background-image: url(./assets/svg/logo.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 70px;
+  transition: all 0.3s;
+}
+
+.footer__logo:hover {
+  color: var(--color-gold);
+  filter: invert(57%) sepia(33%) saturate(371%) hue-rotate(356deg) brightness(90%) contrast(82%);
+}
+
+.footer__logo h1 {
+  font-family: Forum, serif;
+  font-weight: 100;
+  font-size: 28px;
+  line-height: 50px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
 .footer-menu {
   display: block;
   column-width: 130px;
   column-gap: 120px;
-  width: 100%;   
+  width: 100%;
 }
 
 .footer-menu__item {
@@ -549,9 +587,11 @@ a {
 .footer-menu__link:hover {
   color: var(--color-gold);
 }
+
 .social {
   display: flex;
   justify-content: space-between;
+  margin-top: 75px;
 }
 
 .social__link {
@@ -563,7 +603,7 @@ a {
   background-size: 24px;
   border: 1px solid var(--color-white);
   border-radius: 50%;
-  margin: 75px 10px 0 10px;
+  margin: 0 10px;
   transition: all 0.3s;
 }
 
@@ -572,7 +612,7 @@ a {
 }
 
 .social__link-youtube {
-  background-image: url(./assets/svg/yourube_ico.svg);
+  background-image: url(./assets/svg/youtube_ico.svg);
 }
 
 .social__link-instagram {
@@ -590,3 +630,4 @@ a {
 .social__link-pinterest {
   background-image: url(./assets/svg/pinterest_ico.svg);
 }
+
