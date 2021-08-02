@@ -85,7 +85,7 @@
       <section class="section section-explore-dark">
         <div class="container explore-inner">
           <div class="explore-wrapper">
-            <h2 class="section-title">Picture Explore</h2>
+            <h2 class="section-title explore-title">Picture Explore</h2>
             <p class="explore__text">Las Meninas is&nbsp;a&nbsp;1656 painting by&nbsp;Diego Vel&aacute;zquez, the leading artist of&nbsp;the Spanish Golden Age.</p>
             <p class="explore__text">It&nbsp;was cleaned in&nbsp;1984 to&nbsp;remove a&nbsp;&laquo;yellow veil&raquo; of&nbsp;dust that had gathered since the previous restoration in&nbsp;the 19th century.</p>
             <p class="explore__text">The cleaning provoked furious protests, not because the picture had been damaged in&nbsp;any way, but because it&nbsp;looked different.</p>
@@ -134,21 +134,21 @@
                 <div class="form__tickets-count">
                   <p class="form__age">Basic 18+</p>
                   <div class="tickets-count">
-                    <button class="tickets-count__button" type="button" onclick="this.nextElementSibling.value--">–</button>
+                    <button class="tickets-count__button" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
                     <input class="tickets-count__summary" type="number" value="0" min="0" max="100" aria-label="basic-tickets-amount">
-                    <button class="tickets-count__button" type="button" onclick="this.previousElementSibling.value++">+</button>
+                    <button class="tickets-count__button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                   </div>
                 </div>
                 <div class="form__tickets-count">
                   <p class="form__age">Senior 65+</p>
                   <div class="tickets-count">
-                    <button class="tickets-count__button" type="button" onclick="this.nextElementSibling.value--">–</button>
+                    <button class="tickets-count__button" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
                     <input class="tickets-count__summary" type="number" value="0" min="0" max="100" aria-label="senior-tickets-amount">
-                    <button class="tickets-count__button" type="button" onclick="this.previousElementSibling.value++">+</button>
+                    <button class="tickets-count__button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                   </div>
                 </div>
                 <p class="form__total">Total €220</p>
-                <button class="button-buy">Buy Now</button>
+                <button class="total__button-buy">Buy Now</button>
               </div>
             </div>
           </div>
@@ -172,8 +172,53 @@
         </div>
       </section>
     </main>
-    <footer class="section-dark">
-      <div class="container"></div>
+    <footer class="section-dark section-footer">
+      <div class="container">
+       <div class="footer-inner">
+          <a class="header__logo" href="#"><h1>Louvre</h1></a>
+          <nav class="footer__nav">
+            <ul class="footer-menu">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#welcome">Welcome</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#visiting">Visiting</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#explore">Explore</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#video">Video</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#tickets">Tickets</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#contacts">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__social">
+            <ul class="social">
+              <li class="social__item">
+                <a class="social__link social__link-youtube" href="https://www.youtube.com/user/louvre"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link-instagram" href="https://www.instagram.com/museelouvre/"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link-facebook" href="https://www.facebook.com/museedulouvre"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link-twitter" href="https://twitter.com/museelouvre"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link-pinterest" href="https://www.pinterest.fr/museedulouvre/"></a>
+              </li>
+            </ul>
+          </div>
+       </div>
+      </div>
     </footer>
   </body>
 </html>
