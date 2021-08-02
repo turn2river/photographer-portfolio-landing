@@ -272,7 +272,7 @@ a {
   margin-bottom: 75px;
 }
 
-.explore_picture {
+.explore__picture {
   width: 720px;
   height: 700px;
   margin-top: 15px;
@@ -591,7 +591,7 @@ a {
 .social {
   display: flex;
   justify-content: space-between;
-  margin-top: 75px;
+  margin-top: 90px;
 }
 
 .social__link {
@@ -603,8 +603,12 @@ a {
   background-size: 24px;
   border: 1px solid var(--color-white);
   border-radius: 50%;
-  margin: 0 10px;
+  margin: 0 11px;
   transition: all 0.3s;
+}
+
+.footer__social li:last-of-type {
+  margin-right: -8px;
 }
 
 .social__link:hover {
