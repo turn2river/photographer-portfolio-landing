@@ -555,7 +555,7 @@ a {
   filter: invert(57%) sepia(33%) saturate(371%) hue-rotate(356deg) brightness(90%) contrast(82%);
 }
 
-.footer__logo h1 {
+.footer__logo h3 {
   font-family: Forum, serif;
   font-weight: 100;
   font-size: 28px;
