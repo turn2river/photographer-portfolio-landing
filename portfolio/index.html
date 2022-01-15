@@ -4,37 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather+Sans:wght@700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
   <body>
     <header class="header">
       <div class="container header-container">
-        <div class="header__logo"></div>
+        <div class="header__logo">
+          <a href="#">
+            <svg class="logo-icon">
+              <use xlink:href="./assets/svg/sprites.svg#logo"></use>
+            </svg>
+          </a>
+        </div>
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__item"><a href="#Skills" class="nav-link">Skills</a></li>
-            <li class="nav__item"><a href="#Portfolio" class="nav-link">Portfolio</a></li>
-            <li class="nav__item"><a href="#Video" class="nav-link">Video</a></li>
-            <li class="nav__item"><a href="#Price" class="nav-link">Price</a></li>
-            <li class="nav__item"><a href="#Contacts" class="nav-link">Contacts</a></li>
-            <li class="nav__item">
-              <a href="#" class="nav-link"><span class="lang"><span class="lang-inner lang-active">en</span>&nbsp;&nbsp;/&nbsp;&nbsp;<span class="lang-inner">ru</span></span></a>
-            </li>
+            <li class="nav__item"><a class="nav__link"href="#skills">Skills</a></li>
+            <li class="nav__item"><a class="nav__link"href="#portfolio">Portfolio</a></li>
+            <li class="nav__item"><a class="nav__link"href="#video">Video</a></li>
+            <li class="nav__item"><a class="nav__link"href="#price">Price</a></li>
+            <li class="nav__item"><a class="nav__link"href="#contacts">Contacts</a></li>
           </ul>
         </nav>
+        <div class="lang-wrapper">          
+          <span class="lang__item lang-active">en</span>
+          <span class="lang__item">&nbsp;/&nbsp;</span>
+          <span class="lang__item">ru</span>       
+        </div>
       </div>
     </header>
     <main class="main">
-      <section class="section"></section>
-      <section class="section"></section>
-      <section class="section"></section>
-      <section class="section"></section>
-      <section class="section"></section>
-      <section class="section"></section>
+      <section class="hero-container container">
+        <div class="hero-inner">
+          <h1 class="hero__title">Alexa Rise</h1>
+          <p class="hero__text">Save sincere emotions, romantic feelings&nbsp;and happy moments of life together with&nbsp;professional photographer Alexa Rise.</p>
+          <button class="hero__button">Hire me</button>
+        </div>
+      </section>
+      <section class=""></section>
+      <section class=""></section>
+      <section class=""></section>
+      <section class=""></section>
+      <section class=""></section>
     </main>
     <footer class="footer"></footer>
   </body>
