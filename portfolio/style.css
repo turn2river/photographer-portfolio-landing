@@ -37,18 +37,18 @@ body {
   align-items: center;
 }
 
-.nav-list {
+.nav__list {
   display: flex;
   justify-content: space-between;
 }
 
-.nav-item {
+.nav__item {
   padding: 20px 15px;
   font-family: "Inter", sans-serif;
   font-size: 20px;
 }
 
-.nav .nav-item:last-child {
+.nav .nav__item:last-child {
   padding: 20px 0 20px 15px;
   font-weight: 700;
 }
@@ -57,7 +57,7 @@ body {
   color: #bdae82;
 }
 
-.logo {
+.header__logo {
   background-image: url(./assets/svg/logo.svg);
   background-size: contain;
   background-repeat: no-repeat;
