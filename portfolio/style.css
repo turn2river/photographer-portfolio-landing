@@ -8,14 +8,18 @@
 }
 
 *,
-::after,
-::before {
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Inter", sans-serif;
   color: var(--color-white);
+}
+
+button {
+  border: none;
 }
 
 a {
@@ -168,14 +172,14 @@ body {
   color: var(--color-gold);
   line-height: 80px;
   background-color: var(--color-black);
-  padding: 0 20px;  
+  padding: 0 20px;
 }
 
 .skills__items {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: 500px;
+  margin-bottom: 100px;
 }
 
 .skills__item {
@@ -183,11 +187,11 @@ body {
   width: 320px;
   height: 240px;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   align-items: center;
   text-align: center;
   line-height: 36px;
-  font-size: 18px;;
+  font-size: 18px;
 }
 
 .skills__item:nth-child(1) {
@@ -221,6 +225,73 @@ body {
   margin-bottom: 20px;
   letter-spacing: 0px;
   font-size: 20px;
+}
+
+.portfolio__buttons-wrapper { 
+  margin: 0 auto;
+  max-width: 895px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
 }
 
+.portfolio__button {  
+  display: block;
+  width: 220px;
+  height: 55px;
+  background-color: var(--color-black); 
+  font-size: var(--font20);
+  line-height: 40px;
+  color: var(--color-gold);
+  border: 2px solid var(--color-gold);
+  margin-bottom: 60px;
+  transition: color 0.3s ease-in-out;
+}
+
+.portfolio__button-avtive {
+  background-color: var(--color-gold);
+  color: var(--color-black);  
+}
+
+.portfolio__button:hover {
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.portfolio__button-avtive:hover {
+  background-color: var(--color-gold);
+  color: var(--color-black);  
+}
+
+.portfolio__images-wrapper {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.video-player {
+  background-image: url("./assets/img/bgVideoPlayer.jpg");
+  background-position: center center;
+  height: 705px;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.button__play {
+  background-image: url(./assets/svg/play-btn.svg);
+  position: absolute;
+  width: 130px;
+  height: 130px;  
+  background-size: contain;
+  background-color: transparent;
+  top: 288px;
+  left: 636px;
+}
+
+.button__play:hover {
+  cursor: pointer;
+  
+}
