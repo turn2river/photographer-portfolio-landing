@@ -155,6 +155,7 @@ body {
   overflow-x: hidden;
   width: 50%;
   margin: 0 auto;
+  margin-bottom: 60px;
 }
 
 .section__title {
@@ -167,9 +168,59 @@ body {
   color: var(--color-gold);
   line-height: 80px;
   background-color: var(--color-black);
-  padding: 0 20px;
+  padding: 0 20px;  
 }
-.section__title-wrapper::before,
-.section__title-wrapper::after {
-  content: "";
+
+.skills__items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 500px;
 }
+
+.skills__item {
+  background-position: center top;
+  width: 320px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  text-align: center;
+  line-height: 36px;
+  font-size: 18px;;
+}
+
+.skills__item:nth-child(1) {
+  background-image: url("./assets/svg/camera.svg");
+  background-size: 62px 50px;
+  background-repeat: no-repeat;
+}
+
+.skills__item:nth-child(2) {
+  background-image: url("./assets/svg/video.svg");
+  background-size: 62px 50px;
+  background-repeat: no-repeat;
+}
+
+.skills__item:nth-child(3) {
+  background-image: url("./assets/svg/image.svg");
+  background-size: 62px 50px;
+  background-repeat: no-repeat;
+}
+
+.skills__item:nth-child(4) {
+  background-image: url("./assets/svg/mic.svg");
+  background-size: 62px 50px;
+  background-repeat: no-repeat;
+}
+
+.item__header {
+  font-weight: 700;
+  line-height: 40px;
+  padding-top: 100px;
+  margin-bottom: 20px;
+  letter-spacing: 0px;
+  font-size: 20px;
+
+}
+
