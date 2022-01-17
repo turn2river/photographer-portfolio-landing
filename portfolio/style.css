@@ -492,5 +492,9 @@ input:focus {
   display: inline-block;
   width: 32px;
   height: 32px;
-  margin: 0 8px;
+  margin: 0 10px;
+}
+
+.social__list {
+  display: flex;
 }
