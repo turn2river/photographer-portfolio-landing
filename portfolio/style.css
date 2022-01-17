@@ -348,4 +348,92 @@ body {
   background-color: var(--color-gold);
   color: var(--color-black);
   margin-bottom: 43px;
+  transition: color 0.3s ease;
+}
+
+.price__button:hover {
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.contacts-container {
+  background-image: url(./assets/img/bgContacts.jpg);
+  height: 700px;  
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.contacts-wrapper {
+  display: flex;
+  justify-content: space-between;  
+}
+
+.contacts-inner {
+  display: flex;
+  flex-direction: column;  
+  width: 450px;
+  height: 700px;  
+  padding: 60px 10px 0 0;
+}
+
+.contacts__title {
+  font-family: Merriweather;
+  font-size: var(--font40);
+  line-height: 80px;
+  color: var(--color-gold);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  max-width: 1420px; 
+  width: 100%;
+  margin: 0 auto; 
+}
+
+.copy{
+  font-size: 20px;
+  line-height: 50px;
+  margin-left: 10px;
+}
+
+.copy-sign {
+  margin-right: 20px;
+}
+
+.github__link {
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.github__link:hover {
+  color: var(--color-gold);
+}
+
+.rss__link {
+  font-size: var(--font20);
+  line-height: 50px;
+  transition: color 0.3s ease;
+}
+
+.rss__link:hover {
+  color: var(--color-gold);
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  fill: var(--color-white);
+  margin: 0 10px;
+  transition: fill 0.3s ease;
+}
+
+.social-icon:hover {
+  fill: var(--color-gold);
+}
+
+.social {
+ 
 }
