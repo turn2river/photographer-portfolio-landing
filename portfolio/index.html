@@ -82,7 +82,7 @@
             <button class="portfolio__button">Winter</button>
             <button class="portfolio__button">Spring</button>
             <button class="portfolio__button">Summer</button>
-            <button class="portfolio__button portfolio__button-avtive">Autumn</button>
+            <button class="portfolio__button portfolio__button-active">Autumn</button>
           </div>
           <div class="portfolio__images-wrapper">
             <img class="portfolio__image" src="./assets/img/autumn/1.jpg" alt="autumn1" />
@@ -154,14 +154,15 @@
         </div>
       </section>
       <section class="contacts-container container" id="contacts">
-        <div class="contacts-wrapper">
-          <div></div>
+        <div class="contacts-wrapper">          
           <div class="contacts-inner">
             <h2 class="contacts__title">Contact me</h2>
-          <input type="email" placeholder="E-mail">
-          <input type="tel" placeholder="Phone">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-          <button class="contacts__button" type="button">Send message</button>
+          <form class="form-wrapper" action="#">
+            <input class="form__input" type="email" placeholder="E-mail">
+          <input class="form__input" type="tel" placeholder="Phone">
+          <textarea class="form__text-area" id="contacts-form" placeholder="Message"></textarea>
+          <button class="form__button" type="submit">Send message</button>
+          </form>
           </div>
         </div>
       </section>
@@ -174,22 +175,22 @@
         <a class="rss__link" href="#">Rolling Scopes School</a>
       </div>
       <div class="social">
-        <a href="#">
+        <a class="social__link" href="#">
           <svg class="social-icon">
             <use xlink:href="./assets/svg/social-sprites.svg#inst"></use>
           </svg>
         </a>
-        <a href="#">
+        <a class="social__link" href="#">
           <svg class="social-icon">
             <use xlink:href="./assets/svg/social-sprites.svg#fb"></use>
           </svg>
         </a>
-        <a href="#">
+        <a class="social__link" href="#">
           <svg class="social-icon">
             <use xlink:href="./assets/svg/social-sprites.svg#tw"></use>
           </svg>
         </a>
-        <a href="#">
+        <a class="social__link" href="#">
           <svg class="social-icon">
             <use xlink:href="./assets/svg/social-sprites.svg#pinterest"></use>
           </svg>
