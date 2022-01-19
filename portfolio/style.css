@@ -237,6 +237,7 @@ input:focus {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 60px;
 }
 
 .portfolio__button {
@@ -248,7 +249,6 @@ input:focus {
   line-height: 40px;
   color: var(--color-gold);
   border: 2px solid var(--color-gold);
-  margin-bottom: 60px;
   transition: color 0.3s ease-in-out;
 }
 
@@ -500,4 +500,31 @@ input:focus {
 
 .social__list {
   display: flex;
+}
+
+/* MEDIA */
+
+@media (max-width: 1319px) {
+  .portfolio__buttons-wrapper {
+    max-width: 460px;
+    gap: 20px;
+  }
+
+  .skills__items {
+    gap: 50px;
+    max-width: 800px;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+
+  .price__card-inner {
+    min-width: 420px;    
+  }
+
+  .price__cards-wrapper {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
