@@ -119,7 +119,7 @@ input:focus {
   background-image: url("./assets/img/bgHeader.jpg");
   background-position: center -90px;
   background-repeat: no-repeat;
-  height: 820px;  
+  height: 820px;
 }
 
 .hero-inner {
@@ -183,7 +183,7 @@ input:focus {
 .skills__items {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
 }
 
 .skills__item {
@@ -272,7 +272,6 @@ input:focus {
   justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
-  
 }
 
 .video-player {
@@ -280,7 +279,6 @@ input:focus {
   background-position: center center;
   height: 705px;
   position: relative;
-  
 }
 
 .play__icon {
@@ -301,7 +299,7 @@ input:focus {
 
 .price__cards-wrapper {
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
 }
 
 .price__card-inner {
@@ -310,7 +308,7 @@ input:focus {
   display: flex;
   flex-direction: column;
   text-align: center;
-  height: 100%;
+  /* height: 100%; */
   border: 2px solid var(--color-gold);
 }
 
@@ -378,7 +376,6 @@ input:focus {
   display: flex;
   flex-direction: column;
   width: 450px;
-  height: 700px;
   padding-top: 60px;
 }
 
@@ -504,10 +501,10 @@ input:focus {
 
 /* MEDIA */
 
-@media (max-width: 1319px) {
+@media (max-width: 1320px) {
   .portfolio__buttons-wrapper {
-    max-width: 450px;
-    gap: 10px;
+    max-width: 447px;
+    gap: 7px;
   }
 
   .skills__items {
@@ -530,6 +527,22 @@ input:focus {
 
   .contacts-wrapper {
     justify-content: center;
+  }
+
+  .contacts {
+    height: 600px;
+    background-position: -235px 0;
+    background-size: cover;
+  }
+
+  .contacts__title {
+    text-align: center;
+    font-size: 32px;
+    line-height: 64px;
+  }
+
+  .form__button {
+    align-self: center;
   }
 }
 
@@ -562,12 +575,13 @@ input:focus {
   }
 
   .hero-inner {
-    padding: 78px 0 0 40px;
+    padding-left: 40px;
+    padding-top: 78px;
   }
 
   .hero__title {
-    font-size: 32px
-    
+    font-size: 32px;
+    line-height: 64px;
   }
 
   .hero__text {
@@ -585,24 +599,67 @@ input:focus {
     display: none;
   }
 
-
   .section__title {
     font-size: 32px;
+    line-height: 80px;
+  }
+
+  .skills__items {
+    gap: 22px;
+    justify-content: center;
+    margin-top: -5px;
+  }
+
+  .skills__item {
+    line-height: 22px;
+  }
+
+  .item__header {
+    padding-top: 80px;
+  }
+
+  .video {
+    padding: 0 0;
+  }
+
+  .video-player {
+    width: 100%;
+    height: 418px;
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .play__icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .price__cards-wrapper {
+    gap: 50px;
   }
 
   .footer-container {
     flex-direction: column;
     height: 190px;
     align-items: center;
-    padding: 28px 0;
+    padding: 28px 0 30px 0;
+  }
+  .rss {
+    margin-top: -16px;
   }
 
   .rss__link {
     margin: 0;
+    line-height: 24px;
   }
 
   .copy {
     margin: 0;
+  }
+
+  .copy p {
+    line-height: 24px;
   }
 }
 
