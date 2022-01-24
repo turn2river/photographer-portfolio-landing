@@ -573,7 +573,7 @@ input:focus {
 
   .header-container {
     background-position: -5px -30px;
-    background-size: auto 620px;    
+    background-size: auto 620px;
   }
 
   .header__logo {
@@ -614,38 +614,36 @@ input:focus {
 
   .hero__button {
     margin-top: 60px;
-  } 
-  
+  }
+
   .main-nav {
     z-index: 1;
     position: absolute;
-    overflow-x: hidden;     
+    overflow-x: hidden;
     transform: translate(100%);
-    transition: transform 0.5s ease;   
+    transition: transform 0.5s ease;
   }
 
-  .main-nav__list {    
+  .main-nav__list {
     position: absolute;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
   }
 
   .main-nav__item {
     font-size: 35px;
     line-height: 72px;
-    
   }
 
   .nav-active {
-    
-    transition: transform 0.5s ease; 
+    transition: transform 0.5s ease;
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
     width: 80%;
     background-color: rgba(0, 0, 0, 0.75);
-    transform: translate(0%);    
+    transform: translate(0%);
     padding-top: 134px;
     padding-left: 127px;
   }
@@ -685,7 +683,7 @@ input:focus {
     padding: 0 0;
   }
 
-  .video-player {    
+  .video-player {
     width: 100%;
     height: 418px;
     background-size: cover;
@@ -693,11 +691,10 @@ input:focus {
     background-repeat: no-repeat;
   }
 
-  .play__icon {    
+  .play__icon {
     width: 65px;
     height: 65px;
   }
- 
 
   .price__cards-wrapper {
     gap: 50px;
