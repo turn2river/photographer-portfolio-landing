@@ -632,7 +632,8 @@ input:focus {
 
   .main-nav__item {
     font-size: 35px;
-    line-height: 72px;
+    line-height: 73px;
+    padding: 8px 15px;;
   }
 
   .nav-active {
@@ -644,8 +645,8 @@ input:focus {
     width: 80%;
     background-color: rgba(0, 0, 0, 0.75);
     transform: translate(0%);
-    padding-top: 134px;
-    padding-left: 127px;
+    padding-top: 124px;
+    padding-left: 107px;
   }
 
   .cross_maker .main-nav-burger__line1 {
