@@ -29,12 +29,12 @@ const burger = document.querySelector(".main-nav-burger"),
 const navSlide = () => {
   burger.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
-    burger.classList.toggle("cross_maker");
+    burger.classList.toggle("burger-x");
   });
 };
 
 navLinks.forEach((element) => element.addEventListener("click", () => {
-    burger.classList.remove("cross_maker");
+    burger.classList.remove("burger-x");
     nav.classList.remove("nav-active");
   })
 );
