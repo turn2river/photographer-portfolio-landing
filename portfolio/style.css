@@ -618,10 +618,16 @@ input:focus {
 
   .main-nav {
     z-index: 1;
-    position: absolute;
-    overflow-x: hidden;
-    transform: translate(100%);
-    transition: transform 0.5s ease;
+    position: fixed;
+    right: -620px;    
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    max-width: 620px;
+    width: 100%;
+    height: 100%;    
+    transition: 0.5s ease;
+    padding-top: 124px;
+    padding-left: 107px;    
   }
 
   .main-nav__list {
@@ -633,20 +639,11 @@ input:focus {
   .main-nav__item {
     font-size: 35px;
     line-height: 73px;
-    padding: 8px 15px;;
+    padding: 8px 15px;
   }
 
   .nav-active {
-    transition: transform 0.5s ease;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 80%;
-    background-color: rgba(0, 0, 0, 0.75);
-    transform: translate(0%);
-    padding-top: 124px;
-    padding-left: 107px;
+    right: 0
   }
 
   .cross_maker .main-nav-burger__line1 {
@@ -723,6 +720,9 @@ input:focus {
   .copy p {
     line-height: 24px;
   }
+}
+@media (max-width: 500px) {
+
 }
 
 @media (max-width: 500px) {
