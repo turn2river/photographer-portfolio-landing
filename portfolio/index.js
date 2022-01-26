@@ -1,4 +1,3 @@
-
 console.log(` TOTAL: 85 / 85 \n
 1. Вёрстка соответствует макету. Ширина экрана 768px +48 \n
 [x] блок <header> +6 \n
@@ -20,23 +19,27 @@ console.log(` TOTAL: 85 / 85 \n
 [x] при нажатии на крестик адаптивное меню плавно скрывается уезжая за правую часть экрана, крестик превращается в бургер-иконку +4 \n
 [x] бургер-иконка, которая при клике превращается в крестик, создана при помощи css-анимаций без использования изображений +2 \n
 [x] ссылки в адаптивном меню работают, обеспечивая плавную прокрутку по якорям +2 \n
-[x] при клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, крестик превращается в бургер-иконку +4 `)
+[x] при клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, крестик превращается в бургер-иконку +4 `);
 
-const burger = document.querySelector(".main-nav-burger"),
-  nav = document.querySelector(".main-nav"),
-  navLinks = document.querySelectorAll(".main-nav__link");
+const burger = document.querySelector('.main-nav-burger'),
+  nav = document.querySelector('.main-nav'),
+  navLinks = document.querySelectorAll('.main-nav__link');
 
-const navSlide = () => {
-  burger.addEventListener("click", () => {
-    nav.classList.toggle("nav-active");
-    burger.classList.toggle("burger-x");
+const burgerToggle = () => {
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+    burger.classList.toggle('burger-x');
   });
 };
 
-navLinks.forEach((element) => element.addEventListener("click", () => {
-    burger.classList.remove("burger-x");
-    nav.classList.remove("nav-active");
+navLinks.forEach((element) =>
+  element.addEventListener('click', () => {
+    burger.classList.remove('burger-x');
+    nav.classList.remove('nav-active');
   })
 );
 
-navSlide();
+const portfolioBtn = document.querySelector('.portfolio__button'),
+  portfolioImages = document.querySelectorAll('.portfolio__image');
+
+burgerToggle();
