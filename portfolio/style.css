@@ -139,10 +139,12 @@ input:focus {
   background-position: center;
   background-repeat: no-repeat;
   height: 910px;
+  display: flex;
+  align-items: center;
 }
 
 .hero-inner {
-  padding: 160px 0 0 60px;
+  padding-left: 60px;
   max-width: 550px;
   min-height: 330px;
 }

@@ -23,7 +23,8 @@ console.log(` TOTAL: 85 / 85 \n
 
 const burger = document.querySelector('.main-nav-burger'),
   nav = document.querySelector('.main-nav'),
-  navLinks = document.querySelectorAll('.main-nav__link');
+  navLinks = document.querySelectorAll('.main-nav__link'),
+  logoLink = document.querySelector('.logo__icon');
 
 const burgerToggle = () => {
   burger.addEventListener('click', () => {
@@ -39,7 +40,15 @@ navLinks.forEach((element) =>
   })
 );
 
+const logoBurgerRemover = () => {
+  logoLink.addEventListener('click', () => {
+    burger.classList.remove('burger-x');
+    nav.classList.remove('nav-active');
+  });
+};
+
 const portfolioBtn = document.querySelector('.portfolio__button'),
   portfolioImages = document.querySelectorAll('.portfolio__image');
 
 burgerToggle();
+logoBurgerRemover();
