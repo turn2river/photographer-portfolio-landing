@@ -90,36 +90,63 @@ function switchTheme() {
   heroSection.classList.toggle('hero-light');
   contactsSection.classList.toggle('contacts-light');
   themeButton.classList.toggle('theme-switch__button-light');
+
+  if (themeButton.classList.contains('theme-switch__button-light')) {
+    theme = 'light';
+  } else theme = 'dark';
 }
 
 themeButton.addEventListener('click', switchTheme);
 
 /* TRANSLATE */
 
-const langParent = document.querySelector('.lang-wrapper');
-const langBtns = document.querySelectorAll('.lang-wrapper__item');
-const langArray = document.querySelectorAll('[data-i18n]');
+const langParent = document.querySelector('.lang');
+const langDatasets = document.querySelectorAll('[data-i18n]');
+const ruBtn = document.querySelector('.ru');
+const enBtn = document.querySelector('.en');
 
-function getTranslate(lang) {
-  const langSwitcher = () => {
-    langArray.forEach((element) => {
-      element.textContent = i18Obj[lang.target.textContent][element.dataset.i18n];
-    });
-  };
-
-  if (lang.target.classList.contains('lang-wrapper__item')) {
-    langBtns.forEach((element) => {
-      element.classList.remove('lang-wrapper__item-active');
-    });
-    lang.target.classList.add('lang-wrapper__item-active');
-
-    if (lang.target.textContent === 'ru') {
-      langSwitcher();
-    }
-    if (lang.target.textContent === 'en') {
-      langSwitcher();
-    }
+function getTranslate(language) {
+  langDatasets.forEach((element) => {
+    element.textContent = i18Obj[language][element.dataset.i18n];
+    lang = language;
+  });
+}
+function toggleLangActiveClass(event) {
+  if ( event === 'ru') {
+    ruBtn.classList.add('active')
+    enBtn.classList.remove('active')
+  }
+  if ( event === 'en') {
+    enBtn.classList.add('active')
+    ruBtn.classList.remove('active')
   }
 }
 
-langParent.addEventListener('click', getTranslate);
+langParent.addEventListener('click', (event) => {
+  getTranslate(event.target.textContent);
+  toggleLangActiveClass(event.target.textContent);
+});
+
+/* LOCAL STORAGE */
+
+let lang = 'en';
+let theme = 'dark';
+
+function setLocalStorage() {
+  localStorage.setItem('lang', lang);
+  localStorage.setItem('theme', theme);
+}
+window.addEventListener('beforeunload', setLocalStorage);
+
+function getLocalStorage() {
+  if (localStorage.getItem('lang')) {
+    const lang = localStorage.getItem('lang');
+    getTranslate(lang);
+    toggleLangActiveClass(lang);    
+  }
+  if (localStorage.getItem('theme')) {
+    const theme = localStorage.getItem('theme');
+    // switchTheme(theme);
+  }
+}
+window.addEventListener('load', getLocalStorage);

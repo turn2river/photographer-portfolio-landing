@@ -76,7 +76,7 @@ const i18Obj = {
     'price-description-2-span-3': '20 отретушированных фото',
     'price-description-2-span-4': 'Готовность через 1-2 недели',
     'price-description-2-span-5': 'Макияж, визаж',
-    'price-description-3-span-1': 'Три локации и больше',
+    'price-description-3-span-1': 'Три и больше локаций',
     'price-description-3-span-2': '300 цветных фото',
     'price-description-3-span-3': '50 отретушированных фото',
     'price-description-3-span-4': 'Готовность через 1 неделю',

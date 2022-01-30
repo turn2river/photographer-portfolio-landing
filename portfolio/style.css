@@ -18,6 +18,7 @@
   scroll-behavior: smooth;
   font-family: 'Inter', sans-serif;
   color: var(--color-text);
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -110,19 +111,23 @@ input:focus {
   transition: 0.3s ease;
 }
 
-.lang-wrapper__item-active {
+.lang__item {
+  transition: 0.3s ease-in-out;
+}
+
+.lang__item.active {
   color: var(--color-accent);
   cursor: pointer;
 }
 
-.lang-wrapper {
+.lang {
   margin-left: 16px;
   font-weight: 700;
   font-size: var(--font20);
   color: var(--color-text);
 }
 
-.lang-wrapper__item:hover {
+.lang__item:hover {
   cursor: pointer;
 }
 
@@ -588,9 +593,7 @@ input:focus {
   }
 
   .header-inner {
-    background-position: -5px -30px;
-    background-size: auto 620px;
-    /* background-color: transparent; */
+    position: absolute;
   }
 
   .header__logo {
@@ -604,11 +607,11 @@ input:focus {
 
   .hero {
     height: 500px;
-    background-position: -5px -120px;
+    background-position: center center;
     background-size: auto 620px;
   }
 
-  .hero-inner {
+  .hero-inner {    
     padding-left: 40px;
     padding-top: 120px;
   }
@@ -805,5 +808,3 @@ input:focus {
   background-repeat: no-repeat;
   background-position: center center;
 }
-
-
