@@ -787,23 +787,23 @@ input:focus {
   }
 }
 
-.light-theme {
+.body.light {
   --color-base: #fff;
   --color-text: #000;
   --color-transparent: rgba(255, 255, 255, 0.85);
   --color-section-header: #000;
 }
 
-.hero-light {
+.hero.light {
   background-image: url(./assets/img/bgHeader_light.jpg);
   background-position: center center;
 }
 
-.contacts-light {
+.contacts.light {
   background-image: url(./assets/img/bgContacts_light.jpg);
 }
 
-.theme-switch__button-light {
+.theme-switch__button.light {
   background-image: url(./assets/svg/dark.svg);
   background-repeat: no-repeat;
   background-position: center center;

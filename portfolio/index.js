@@ -86,10 +86,10 @@ const heroSection = document.querySelector('.hero');
 const contactsSection = document.querySelector('.contacts');
 
 function switchTheme() {
-  pageBody.classList.toggle('light-theme');
-  heroSection.classList.toggle('hero-light');
-  contactsSection.classList.toggle('contacts-light');
-  themeButton.classList.toggle('theme-switch__button-light');
+  pageBody.classList.toggle('light');
+  heroSection.classList.toggle('light');
+  contactsSection.classList.toggle('light');
+  themeButton.classList.toggle('light');
 
   if (themeButton.classList.contains('theme-switch__button-light')) {
     theme = 'light';
