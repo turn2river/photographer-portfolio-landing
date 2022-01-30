@@ -112,13 +112,13 @@ function getTranslate(language) {
   });
 }
 function toggleLangActiveClass(event) {
-  if ( event === 'ru') {
-    ruBtn.classList.add('active')
-    enBtn.classList.remove('active')
+  if (event === 'ru') {
+    ruBtn.classList.add('active');
+    enBtn.classList.remove('active');
   }
-  if ( event === 'en') {
-    enBtn.classList.add('active')
-    ruBtn.classList.remove('active')
+  if (event === 'en') {
+    enBtn.classList.add('active');
+    ruBtn.classList.remove('active');
   }
 }
 
@@ -142,7 +142,7 @@ function getLocalStorage() {
   if (localStorage.getItem('lang')) {
     const lang = localStorage.getItem('lang');
     getTranslate(lang);
-    toggleLangActiveClass(lang);    
+    toggleLangActiveClass(lang);
   }
   if (localStorage.getItem('theme')) {
     const theme = localStorage.getItem('theme');
