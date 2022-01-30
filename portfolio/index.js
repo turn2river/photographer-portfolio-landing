@@ -78,26 +78,6 @@ function preloadImages() {
 }
 preloadImages();
 
-/* LIGHT/DARK THEME SWITCHER */
-
-const themeButton = document.querySelector('.theme-switch__button');
-const pageBody = document.querySelector('.body');
-const heroSection = document.querySelector('.hero');
-const contactsSection = document.querySelector('.contacts');
-
-function switchTheme() {
-  pageBody.classList.toggle('light');
-  heroSection.classList.toggle('light');
-  contactsSection.classList.toggle('light');
-  themeButton.classList.toggle('light');
-
-  if (themeButton.classList.contains('theme-switch__button-light')) {
-    theme = 'light';
-  } else theme = 'dark';
-}
-
-themeButton.addEventListener('click', switchTheme);
-
 /* TRANSLATE */
 
 const langParent = document.querySelector('.lang');
@@ -127,14 +107,45 @@ langParent.addEventListener('click', (event) => {
   toggleLangActiveClass(event.target.textContent);
 });
 
-/* LOCAL STORAGE */
+/* LIGHT/DARK THEME SWITCHER */
 
+const themeButton = document.querySelector('.theme-switch__button');
+const pageBody = document.querySelector('.body');
+const heroSection = document.querySelector('.hero');
+const contactsSection = document.querySelector('.contacts');
 let lang = 'en';
-let theme = 'dark';
+let theme;
+
+function switchTheme(value) {
+  // console.log(value);
+  if (value === 'light') {
+    pageBody.classList.add('light');
+    heroSection.classList.add('light');
+    contactsSection.classList.add('light');
+    themeButton.classList.add('light');
+  } else if (value === 'dark') {
+    pageBody.classList.remove('light');
+    heroSection.classList.remove('light');
+    contactsSection.classList.remove('light');
+    themeButton.classList.remove('light');
+  }
+}
+
+themeButton.addEventListener('click', () => {
+  //asign theme state
+  themeButton.classList.contains('light') ? (theme = 'dark') : (theme = 'light');
+
+  switchTheme(theme);
+
+  localStorage.setItem('theme', theme);
+  //change theme var state
+  theme === 'light' ? (theme = 'dark') : (theme = 'light');
+});
+
+/* LOCAL STORAGE */
 
 function setLocalStorage() {
   localStorage.setItem('lang', lang);
-  localStorage.setItem('theme', theme);
 }
 window.addEventListener('beforeunload', setLocalStorage);
 
@@ -145,8 +156,8 @@ function getLocalStorage() {
     toggleLangActiveClass(lang);
   }
   if (localStorage.getItem('theme')) {
-    const theme = localStorage.getItem('theme');
-    // switchTheme(theme);
+    const themeLocal = localStorage.getItem('theme');
+    switchTheme(themeLocal);
   }
 }
 window.addEventListener('load', getLocalStorage);
