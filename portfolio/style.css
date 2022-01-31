@@ -51,10 +51,11 @@ input:focus {
 
 .section-inner {
   padding-top: 90px;
+  min-height: 600px;
 }
 
 .header-inner {
-  background-color: var(--color-transparent);
+  background-color: transparent;
   z-index: 1;
   position: fixed;
   left: 0;
@@ -64,6 +65,11 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.5s ease-in-out;
+}
+
+.header-inner.bg-scroll {
+  background-color: var(--color-transparent)
 }
 
 .header__logo {
@@ -243,6 +249,8 @@ input:focus {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  /* max-width: 800px; */
+  /* margin: 0 auto; */
 }
 
 .skills__item {
@@ -255,6 +263,7 @@ input:focus {
   text-align: center;
   line-height: 36px;
   font-size: 18px;
+  /* margin-bottom: 60px; */
 }
 
 .skills__item:nth-child(1) {
@@ -321,10 +330,6 @@ input:focus {
 .portfolio__button:hover {
   color: var(--color-text);
   cursor: pointer;
-}
-
-.portfolio__button:hover .portfolio__button:focus {
-  box-shadow: inset -7em 0 0 0 var(--color-accent), inset 7em 0 0 0 var(--color-accent);
 }
 
 .portfolio__images {
@@ -406,15 +411,21 @@ input:focus {
   font-size: var(--font20);
   line-height: 40px;
   padding: 8px 39px 7px 39px;
-  background-color: var(--color-accent);
-  color: var(--color-base);
+  background-color: transparent;
+  color: var(--color-accent);
   margin-bottom: 43px;
-  transition: color 0.3s ease;
+  transition: 0.3s ease;
+  outline: 2px solid var(--color-accent);
 }
 
 .price__button:hover {
   color: var(--color-text);
   cursor: pointer;
+}
+
+.price__button.active {
+box-shadow: inset -121px 0 0 0 var(--color-accent), inset 121px 0 0 0 var(--color-accent);
+color: var(--color-base);
 }
 
 .contacts-section {
