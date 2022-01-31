@@ -55,6 +55,7 @@ function highlightLink(event) {
 navLinksParent.addEventListener('click', highlightLink);
 
 /* HIGHLIGHT MENU ON SCROLL*/
+
 const sections = document.querySelectorAll('section');
 
 window.addEventListener('scroll', () => {
@@ -128,6 +129,9 @@ function getTranslate(language) {
   langDatasets.forEach((element) => {
     element.textContent = i18Obj[language][element.dataset.i18n];
     lang = language;
+    if (element.placeholder) {
+      element.placeholder = i18Obj[language][element.dataset.i18n];      
+    }
   });
 }
 function toggleLangActiveClass(event) {
@@ -151,7 +155,7 @@ langParent.addEventListener('click', (event) => {
 const themeButton = document.querySelector('.theme-switch__button');
 const pageBody = document.querySelector('.body');
 const heroSection = document.querySelector('.hero');
-const contactsSection = document.querySelector('.contacts');
+const contactsSection = document.querySelector('.contacts-section');
 let lang = 'en';
 let theme;
 

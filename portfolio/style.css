@@ -2,7 +2,7 @@
   --color-accent: #bdae82;
   --color-base: #000;
   --color-text: #fff;
-  --color-transparent: rgba(0, 0, 0, 0.75);
+  --color-transparent: rgba(0, 0, 0, 0.95);
   --color-section-header: #bdae82;
   --font60: 60px;
   --font40: 40px;
@@ -811,7 +811,7 @@ input:focus {
 .body.light {
   --color-base: #fff;
   --color-text: #000;
-  --color-transparent: rgba(255, 255, 255, 0.85);
+  --color-transparent: rgba(255, 255, 255, 0.95);
   --color-section-header: #000;
 }
 
@@ -820,7 +820,7 @@ input:focus {
   background-position: center center;
 }
 
-.contacts.light {
+.contacts-section.light {
   background-image: url(./assets/img/bgContacts_light.jpg);
 }
 
