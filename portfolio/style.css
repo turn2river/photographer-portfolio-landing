@@ -51,10 +51,11 @@ input:focus {
 
 .section-inner {
   padding-top: 90px;
+  min-height: 600px;
 }
 
 .header-inner {
-  background-color: var(--color-transparent);
+  background-color: transparent;
   z-index: 1;
   position: fixed;
   left: 0;
@@ -64,6 +65,11 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.5s ease-in-out;
+}
+
+.header-inner.bg-scroll {
+  background-color: var(--color-transparent)
 }
 
 .header__logo {
@@ -243,6 +249,8 @@ input:focus {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  /* max-width: 800px; */
+  /* margin: 0 auto; */
 }
 
 .skills__item {
@@ -255,6 +263,7 @@ input:focus {
   text-align: center;
   line-height: 36px;
   font-size: 18px;
+  /* margin-bottom: 60px; */
 }
 
 .skills__item:nth-child(1) {

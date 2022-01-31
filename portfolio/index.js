@@ -61,10 +61,12 @@ const sections = document.querySelectorAll('section');
 window.addEventListener('scroll', () => {
   let currentScroll = '';
 
-  sections.forEach((element) => {
-    const sectionTop = element.offsetTop;
-    if (scrollY >= sectionTop - 350) {
-      currentScroll = element.getAttribute('id');
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    if (scrollY >= sectionTop - sectionHeight / 3) {
+      currentScroll = section.getAttribute('id');
     }
   });
 
@@ -74,6 +76,18 @@ window.addEventListener('scroll', () => {
       li.classList.add('active');
     }
   });
+});
+
+/* MENU BG ON SCROLL*/
+const menuBG = document.querySelector('.header-inner');
+
+window.addEventListener('scroll', () => {
+  if (scrollY > sections[0].clientHeight / 2) {
+    menuBG.classList.add('bg-scroll');
+  }
+  if (scrollY <= sections[0].clientHeight / 2) {
+    menuBG.classList.remove('bg-scroll');
+  }
 });
 
 /* IMAGE TABS */
@@ -130,7 +144,7 @@ function getTranslate(language) {
     element.textContent = i18Obj[language][element.dataset.i18n];
     lang = language;
     if (element.placeholder) {
-      element.placeholder = i18Obj[language][element.dataset.i18n];      
+      element.placeholder = i18Obj[language][element.dataset.i18n];
     }
   });
 }
