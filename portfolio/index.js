@@ -95,9 +95,9 @@ function changeImage(event) {
 function changeImageActiveClass(event) {
   const target = event.target;
   portfolioBtns.forEach((element) => {
-    element.classList.remove('portfolio__button-active');
+    element.classList.remove('active');
   });
-  target.classList.add('portfolio__button-active');
+  target.classList.add('active');
 }
 
 portfolioBtnsParent.addEventListener('click', changeImage);

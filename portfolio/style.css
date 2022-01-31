@@ -35,7 +35,7 @@ li {
 }
 
 body {
-  background-color: var(--color-base);  
+  background-color: var(--color-base);
 }
 
 textarea:focus,
@@ -95,24 +95,22 @@ input:focus {
 
 .main-nav__link::after {
   position: absolute;
-  content: "";
+  content: '';
   bottom: -4px;
   left: 0;
   right: 0;
   width: 0%;
   border-bottom: 2px solid var(--color-accent);
   transition: 0.3s ease-in-out;
-  
 }
 
-.main-nav__link:hover.main-nav__link::after{
+.main-nav__link:hover.main-nav__link::after {
   width: 100%;
 }
 
 .main-nav__link.active {
   color: var(--color-accent);
 }
-
 
 .main-nav-burger {
   display: none;
@@ -314,15 +312,19 @@ input:focus {
   transition: color 0.3s ease-in-out;
 }
 
-.portfolio__button-active {
-  background-color: var(--color-accent);
+.portfolio__button.active {  
   color: var(--color-base);
-  transition: 0.5s ease;
+  transition: 0.3s ease;
+  box-shadow: inset -110px 0 0 0 var(--color-accent), inset 110px 0 0 0 var(--color-accent);
 }
 
 .portfolio__button:hover {
   color: var(--color-text);
   cursor: pointer;
+}
+
+.portfolio__button:hover .portfolio__button:focus {
+  box-shadow: inset -7em 0 0 0 var(--color-accent), inset 7em 0 0 0 var(--color-accent);
 }
 
 .portfolio__images {
@@ -632,7 +634,7 @@ input:focus {
     background-size: auto 620px;
   }
 
-  .hero-inner {    
+  .hero-inner {
     padding-left: 40px;
     padding-top: 120px;
   }
