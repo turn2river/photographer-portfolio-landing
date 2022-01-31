@@ -31,10 +31,49 @@ function logoClickListener() {
 function removeMenuClasses() {
   burger.classList.remove('burger-x');
   nav.classList.remove('nav-active');
+  navLinks.forEach((element) => {
+    element.classList.remove('active');
+  });
 }
 
 toggleBurgerClass();
 logoClickListener();
+
+/* HIGHLIGHT MENU ON ACTIVE*/
+
+const navLinksParent = document.querySelector('.main-nav__list');
+
+function highlightLink(event) {
+  if (event.target.classList.contains('main-nav__link')) {
+    navLinks.forEach((element) => {
+      element.classList.remove('active');
+    });
+    event.target.classList.add('active');
+  }
+}
+
+navLinksParent.addEventListener('click', highlightLink);
+
+/* HIGHLIGHT MENU ON SCROLL*/
+const sections = document.querySelectorAll('section');
+
+window.addEventListener('scroll', () => {
+  let currentScroll = '';
+
+  sections.forEach((element) => {
+    const sectionTop = element.offsetTop;
+    if (scrollY >= sectionTop - 350) {
+      currentScroll = element.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach((li) => {
+    li.classList.remove('active');
+    if (li.classList.contains(currentScroll)) {
+      li.classList.add('active');
+    }
+  });
+});
 
 /* IMAGE TABS */
 
@@ -117,13 +156,14 @@ let lang = 'en';
 let theme;
 
 function switchTheme(value) {
-  // console.log(value);
   if (value === 'light') {
     pageBody.classList.add('light');
     heroSection.classList.add('light');
     contactsSection.classList.add('light');
     themeButton.classList.add('light');
-  } else if (value === 'dark') {
+  }
+
+  if (value === 'dark') {
     pageBody.classList.remove('light');
     heroSection.classList.remove('light');
     contactsSection.classList.remove('light');
@@ -132,7 +172,7 @@ function switchTheme(value) {
 }
 
 themeButton.addEventListener('click', () => {
-  //asign theme state
+  //asign theme var state
   themeButton.classList.contains('light') ? (theme = 'dark') : (theme = 'light');
 
   switchTheme(theme);

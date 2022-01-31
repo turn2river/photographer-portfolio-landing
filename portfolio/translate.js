@@ -9,7 +9,7 @@ const i18Obj = {
     'hero-text': 'Save sincere emotions, romantic feelings and happy moments of life together with professional photographer Alexa Rise',
     'hire': 'Hire me',
     'skill-title-1': 'Digital photography',
-    'skill-text-1': 'High-quality photos in the studio and&nbsp;outdoors',
+    'skill-text-1': 'High-quality photos in the studio and outdoors',
     'skill-title-2': 'Video shooting',
     'skill-text-2': 'Capture your moments so they stay with you forever',
     'skill-title-3': 'Rotouch',
