@@ -332,10 +332,6 @@ input:focus {
   cursor: pointer;
 }
 
-.portfolio__button:hover .portfolio__button:focus {
-  box-shadow: inset -7em 0 0 0 var(--color-accent), inset 7em 0 0 0 var(--color-accent);
-}
-
 .portfolio__images {
   display: flex;
   justify-content: center;
@@ -415,15 +411,21 @@ input:focus {
   font-size: var(--font20);
   line-height: 40px;
   padding: 8px 39px 7px 39px;
-  background-color: var(--color-accent);
-  color: var(--color-base);
+  background-color: transparent;
+  color: var(--color-accent);
   margin-bottom: 43px;
-  transition: color 0.3s ease;
+  transition: 0.3s ease;
+  outline: 2px solid var(--color-accent);
 }
 
 .price__button:hover {
   color: var(--color-text);
   cursor: pointer;
+}
+
+.price__button.active {
+box-shadow: inset -121px 0 0 0 var(--color-accent), inset 121px 0 0 0 var(--color-accent);
+color: var(--color-base);
 }
 
 .contacts-section {

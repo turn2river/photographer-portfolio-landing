@@ -1,6 +1,27 @@
 import i18Obj from './translate.js';
 
-console.log(` TOTAL: 85 / 85 \n `);
+console.log(` TOTAL: 85 / 85 
+1. Смена изображений в секции portfolio +25 
+    [x] при кликах по кнопкам Winter, Spring, Summer, Autumn в секции portfolio отображаются изображения из папки с соответствующим названием +20  
+    [x] кнопка, по которой кликнули, становится активной т.е. выделяется стилем. Другие кнопки при этом будут неактивными +5 
+2. Перевод страницы на два языка +25 
+    [x] при клике по надписи ru англоязычная страница переводится на русский язык +10 
+    [x] при клике по надписи en русскоязычная страница переводится на английский язык +10 
+    [x] надписи en или ru, соответствующие текущему языку страницы, становятся активными т.е. выделяются стилем +5 
+3. Переключение светлой и тёмной темы +25 
+    [x] На страницу добавлен переключатель при клике по которому: 
+      - тёмная тема приложения сменяется светлой +10 
+      - светлая тема приложения сменяется тёмной +10 
+      - после смены светлой и тёмной темы интерактивные элементы по-прежнему изменяют внешний вид при наведении и клике и при этом остаются видимыми на странице (нет ситуации с белым шрифтом на белом фоне) +5 
+4. Дополнительный функционал: 
+    [x] выбранный пользователем язык отображения страницы и светлая или тёмная тема сохраняются при перезагрузке страницы +5 
+    [x] сложные эффекты для кнопок при наведении и/или клике +5 (меню и секции Portfolio и Price) 
+5. Дополнительный функционал2:
+    [x] меню фиксед, при скроллинге у меню появляется бэкграунд
+    [x] кнопки меню становятся активными, в зависимости от того, на какой секции находится пользователь
+    [x]   
+
+  `);
 
 /* BURGER MENU */
 
@@ -116,6 +137,21 @@ function changeImageActiveClass(event) {
 
 portfolioBtnsParent.addEventListener('click', changeImage);
 
+/*PRICE BUTTONS*/
+
+const priceBtns = document.querySelectorAll('.price__button');
+const priceBtnsParent = document.querySelector('.price__cards-wrapper');
+
+priceBtnsParent.addEventListener('click', (event) => {
+  if (event.target.classList.contains('price__button')) {
+    console.log('click');
+    priceBtns.forEach((el) => {
+      el.classList.remove('active');
+    });
+    event.target.classList.add('active');
+  }
+});
+
 /* PRELOAD IMAGES */
 
 const seasons = ['winter', 'spring', 'summer', 'autumn'];
@@ -133,7 +169,7 @@ function preloadImages() {
 preloadImages();
 
 /* TRANSLATE */
-
+let lang = 'en';
 const langParent = document.querySelector('.lang');
 const langDatasets = document.querySelectorAll('[data-i18n]');
 const ruBtn = document.querySelector('.ru');
@@ -166,12 +202,11 @@ langParent.addEventListener('click', (event) => {
 
 /* LIGHT/DARK THEME SWITCHER */
 
+let theme;
 const themeButton = document.querySelector('.theme-switch__button');
 const pageBody = document.querySelector('.body');
 const heroSection = document.querySelector('.hero');
 const contactsSection = document.querySelector('.contacts-section');
-let lang = 'en';
-let theme;
 
 function switchTheme(value) {
   if (value === 'light') {
