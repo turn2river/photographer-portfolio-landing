@@ -341,6 +341,7 @@ input:focus {
 
 .video-player {
   background-image: url('./assets/img/bgVideoPlayer.jpg');
+  border: 1px solid var(--color-accent);
   background-position: center center;
   height: 705px;
   position: relative;
