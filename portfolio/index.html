@@ -51,31 +51,30 @@
           <span class="ru lang__item">ru</span>
         </div>
         <div class="theme-switch">
-          <button class="theme-switch__button">
-          </button>
+          <button class="theme-switch__button"></button>
         </div>
       </div>
     </header>
     <main class="main">
       <section class="hero section container dark">
         <div class="hero-inner">
-          <h1 class="hero__title" data-i18n="hero-title" >Alexa Rise</h1>
-          <p class="hero__text" data-i18n="hero-text" >Save sincere emotions, romantic&nbsp;feelings and happy moments of life together with professional photographer Alexa Rise</p>
+          <h1 class="hero__title" data-i18n="hero-title">Alexa Rise</h1>
+          <p class="hero__text" data-i18n="hero-text">Save sincere emotions, romantic&nbsp;feelings and happy moments of life together with professional photographer Alexa Rise</p>
           <a class="hero__button" data-i18n="hire" href="#contacts">Hire me</a>
         </div>
       </section>
       <section class="skills section container" id="skills">
         <div class="section-inner">
           <div class="section__title-wrapper">
-            <h2 class="section__title" data-i18n="skills" >Skills</h2>
+            <h2 class="section__title" data-i18n="skills">Skills</h2>
           </div>
           <div class="skills__items-wrapper">
             <div class="skills__item">
-              <h3 class="skills__header" data-i18n="skill-title-1" >Digital photography</h3>
-              <p class="skills__text" data-i18n="skill-text-1" >High-quality photos in the studio and&nbsp;outdoors</p>
+              <h3 class="skills__header" data-i18n="skill-title-1">Digital photography</h3>
+              <p class="skills__text" data-i18n="skill-text-1">High-quality photos in the studio and&nbsp;outdoors</p>
             </div>
             <div class="skills__item">
-              <h3 class="skills__header" data-i18n="skill-title-2" >Video shooting</h3>
+              <h3 class="skills__header" data-i18n="skill-title-2">Video shooting</h3>
               <p class="skills__text" data-i18n="skill-text-2">Capture your moments so they stay with you forever</p>
             </div>
             <div class="skills__item">
@@ -110,18 +109,28 @@
           </div>
         </div>
       </section>
-      <section class="video section container" id="video">
+      <section class="video-wrapper section container" id="video">
         <div class="section-inner">
           <div class="section__title-wrapper">
             <h2 class="section__title" data-i18n="video">Video</h2>
           </div>
           <div class="video-player">
-            <!-- <video src="./assets/video/video.mp4"></video> -->
-            <button class="button__play" type="button">
+            <video class="video" src="./assets/video/video.mp4" width="100%"></video>
+            
+            <div class="controls">
+              <button class="button__play" type="button">
               <svg class="play__icon">
                 <use xlink:href="./assets/svg/play-btn-sprite.svg#play-btn"></use>
               </svg>
             </button>
+              <img class="play-control" src="./assets/svg/play.svg" alt="play-button">
+              <img class="pause-control" src="./assets/svg/pause.svg" alt="pause-button">
+              <input type="range" class="progress-bar" value="0" step="0.001" />
+              <span class="current-time">00:00</span><span>/</span><span class="total-time"></span>
+              <img class="volume-control" src="./assets/svg/volume.svg" alt="volume-button">
+              <input type="range" class="volume-bar" value="0.5" min="0" max="1" step="0.01" />
+              <img class="fullscreen-control" src="./assets/svg/fullscreen.svg" alt="fullscreen-button">
+            </div>
           </div>
         </div>
       </section>
@@ -161,8 +170,8 @@
               <div class="price__text-wrapper">
                 <span class="price__text" data-i18n="price-description-3-span-1">Three locations or more</span>
                 <span class="price__text" data-i18n="price-description-3-span-2">300 photos in color</span>
-                <span class="price__text"data-i18n="price-description-3-span-3">50 retouched photos</span>
-                <span class="price__text"data-i18n="price-description-3-span-4">Readiness 1 week</span>
+                <span class="price__text" data-i18n="price-description-3-span-3">50 retouched photos</span>
+                <span class="price__text" data-i18n="price-description-3-span-4">Readiness 1 week</span>
                 <span class="price__text" data-i18n="price-description-3-span-5">Make up, visage, hairstyle</span>
               </div>
               <button class="price__button" type="button" data-i18n="order">Order shooting</button>
@@ -175,9 +184,9 @@
           <div class="contacts-inner">
             <h2 class="contacts__title" data-i18n="contact-me">Contact me</h2>
             <form class="form-wrapper" action="#">
-              <input class="form__input"data-i18n="email" type="email" placeholder="E-mail" />
-              <input class="form__input"data-i18n="phone"  type="tel" placeholder="Phone" />
-              <textarea class="form__text-area"data-i18n="message" id="contacts-form" placeholder="Message"></textarea>
+              <input class="form__input" data-i18n="email" type="email" placeholder="E-mail" />
+              <input class="form__input" data-i18n="phone" type="tel" placeholder="Phone" />
+              <textarea class="form__text-area" data-i18n="message" id="contacts-form" placeholder="Message"></textarea>
               <button class="form__button" type="submit" data-i18n="send-message">Send message</button>
             </form>
           </div>
