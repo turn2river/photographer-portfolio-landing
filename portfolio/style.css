@@ -405,6 +405,7 @@ input:focus {
 .progress-bar {
   /* max-width: 800px; */
   width: 100%;
+  border: 1px solid var(--color-accent);
   background: linear-gradient(to right, var(--color-accent) 0%, var(--color-accent) 0%, #fff 0%, #fff 100%);
   border-radius: 8px;
   height: 7px;
@@ -425,6 +426,7 @@ input:focus {
 .volume-bar {
   max-width: 100px;
   width: 100%;
+  border: 1px solid var(--color-accent);
   background: linear-gradient(to right, var(--color-accent) 0%, var(--color-accent) 100%, #fff 100%, #fff 100%);
   border-radius: 8px;
   height: 7px;
