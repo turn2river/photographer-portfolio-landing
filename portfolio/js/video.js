@@ -72,8 +72,10 @@ function videoFunc() {
   video.addEventListener('click', () => {
     if (video.paused) {
       playVideo();
+      playBtn.src = './assets/svg/pause.svg'
     } else if (!video.paused) {
       pauseVideo();
+      playBtn.src = './assets/svg/play.svg'
     }
   });
 
@@ -105,6 +107,7 @@ function videoFunc() {
   playBtnBig.addEventListener('click', () => {
     if (video.paused) {
       playVideo();
+      playBtn.src = './assets/svg/pause.svg'
     }
   });
 
