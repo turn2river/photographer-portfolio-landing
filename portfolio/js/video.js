@@ -1,4 +1,22 @@
 function videoFunc() {
+
+  console.log(`total 70/70
+  1. Вёрстка +10
+  2. Кнопка Play/Pause на панели управления +10
+  3. Прогресс-бар отображает прогресс проигрывания видео. При перемещении ползунка прогресс-бара вручную меняется текущее время проигрывания видео. Разный цвет прогресс-бара до и после ползунка +10
+  4. При перемещении ползунка регулятора громкости звука можно сделать звук громче или тише. Разный цвет регулятора громкости звука до и после ползунка +10
+  5. При клике по кнопке Volume/Mute можно включить или отключить звук. Одновременно с включением/выключением звука меняется внешний вид кнопки. Также внешний вид кнопки меняется, если звук включают или выключают перетягиванием регулятора громкости звука от нуля или до нуля +10
+  6. Кнопка Play/Pause в центре видео +10
+  7. Очень высокое качество оформления приложения и/или дополнительный не предусмотренный в задании функционал, улучшающий качество приложения +10
+    Доп. функционал:
+      - кнопка fullscreen
+      - отображение текущего времени / полного времени записи
+      - запустить/остановить видео можно кликнув в любом месте видео
+  `);
+
+
+
+
   const video = document.querySelector('video');
   const playBtnBig = document.querySelector('.play__icon');
   const playBtn = document.querySelector('.play-control');
@@ -142,16 +160,15 @@ function videoFunc() {
   video.addEventListener('ended', () => {
     clearInterval(progressId);
     toggleBigPlay();
+    playBtn.src = './assets/svg/play.svg'
   });
 
   volumeBar.addEventListener('change', () => {
-    video.volume = volumeBar.value;
-    currentVolume = volumeBar.value;
-    console.log(currentVolume);
-    if (video.volume < 0.01) {
+    video.volume = volumeBar.value;  
+    if (volumeBar.value == 0) {
       video.muted = true;
       volumeBtn.src = './assets/svg/mute.svg';
-    } else if (video.volume >= 0.01) {
+    } else {
       video.muted = false;
       volumeBtn.src = './assets/svg/volume.svg';
     }
@@ -167,6 +184,7 @@ function videoFunc() {
     } else if (video.muted) {
       video.muted = false;
       volumeBar.value = currentVolume;
+      video.volume = currentVolume;
       volumeBtn.src = './assets/svg/volume.svg';
       changeVolumeBarColor();
     }
