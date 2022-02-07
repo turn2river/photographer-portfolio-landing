@@ -1,5 +1,4 @@
 function videoFunc() {
-
   console.log(`total 70/70
   1. Вёрстка +10
   2. Кнопка Play/Pause на панели управления +10
@@ -13,9 +12,6 @@ function videoFunc() {
       - отображение текущего времени / полного времени записи
       - запустить/остановить видео можно кликнув в любом месте видео
   `);
-
-
-
 
   const video = document.querySelector('video');
   const playBtnBig = document.querySelector('.play__icon');
@@ -40,14 +36,14 @@ function videoFunc() {
     progressBar.min = 0;
     progressBar.max = video.duration;
     setTotalTime(video.duration);
-  });
 
-  const setTotalTime = (totalTIme) => {
-    const minutes = Math.floor((totalTIme / 60) % 60);
-    const seconds = Math.floor(totalTIme % 60);
-    totalMinutes.textContent = `${minutes}`;
-    totalSeconds.textContent = setZero(`${seconds}`);
-  };
+    const setTotalTime = (totalTIme) => {
+      const minutes = Math.floor((totalTIme / 60) % 60);
+      const seconds = Math.floor(totalTIme % 60);
+      totalMinutes.textContent = `${minutes}`;
+      totalSeconds.textContent = setZero(`${seconds}`);
+    }; 
+  });
 
   const changeProgressBarColor = () => {
     const max = progressBar.max;
@@ -90,10 +86,10 @@ function videoFunc() {
   video.addEventListener('click', () => {
     if (video.paused) {
       playVideo();
-      playBtn.src = './assets/svg/pause.svg'
+      playBtn.src = './assets/svg/pause.svg';
     } else if (!video.paused) {
       pauseVideo();
-      playBtn.src = './assets/svg/play.svg'
+      playBtn.src = './assets/svg/play.svg';
     }
   });
 
@@ -125,7 +121,7 @@ function videoFunc() {
   playBtnBig.addEventListener('click', () => {
     if (video.paused) {
       playVideo();
-      playBtn.src = './assets/svg/pause.svg'
+      playBtn.src = './assets/svg/pause.svg';
     }
   });
 
@@ -160,11 +156,11 @@ function videoFunc() {
   video.addEventListener('ended', () => {
     clearInterval(progressId);
     toggleBigPlay();
-    playBtn.src = './assets/svg/play.svg'
+    playBtn.src = './assets/svg/play.svg';
   });
 
   volumeBar.addEventListener('change', () => {
-    video.volume = volumeBar.value;  
+    video.volume = volumeBar.value;
     if (volumeBar.value == 0) {
       video.muted = true;
       volumeBtn.src = './assets/svg/mute.svg';
