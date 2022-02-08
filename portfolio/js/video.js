@@ -31,7 +31,7 @@ function videoFunc() {
   let currentVolume = volumeBar.value;
 
   // video.muted = true; //remove
-
+  progressBar.max = video.duration;
   window.addEventListener('load', () => {
     progressBar.min = 0;
     progressBar.max = video.duration;
