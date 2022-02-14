@@ -5,5 +5,5 @@ Private repository for @turn2river
 
 [Deploy Link Portfolio](https://rolling-scopes-school.github.io/turn2river-JSFEPRESCHOOL/portfolio/)
 
-[Deploy Link Portfolio](https://rolling-scopes-school.github.io/turn2river-JSFEPRESCHOOL/js-movie-app/)
+[Deploy Link Movie-App](https://rolling-scopes-school.github.io/turn2river-JSFEPRESCHOOL/js-movie-app/)
 
