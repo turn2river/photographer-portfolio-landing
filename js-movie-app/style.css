@@ -64,7 +64,6 @@
   left: 0;
   right: 0;
   z-index: 8;
-
 }
 
 .nav__inner {
@@ -147,8 +146,8 @@
 .promo__description {
   font-family: 'gotham pro';
   padding-top: 40px;
-  font-size: 26px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .promo__rating {
