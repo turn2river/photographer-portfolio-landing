@@ -20,7 +20,15 @@
 
 .body {
   background-color: var(--color-base);
-  transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;  
+}
+
+.body.scroll-lock {
+  overflow: hidden;
+}
+
+.main {
+  min-height: calc(100vh - 760px);
 }
 
 .container {
@@ -210,8 +218,7 @@
   align-items: center;
   font-size: 20px;
   font-family: 'gotham pro';
-  font-weight: 700;
-  /* transition: 0.3s ease-in-out; */
+  font-weight: 700;  
 }
 
 .github__link,
@@ -225,6 +232,12 @@
 }
 
 /* modal */
+
+.modal-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 .movie-id {
   display: none;
@@ -248,17 +261,17 @@
 .modal__title {
   font-family: 'gotham pro';
   font-weight: 700;
-  font-size: 36px;
+  font-size: 30px;
   padding: 20px 0;
 }
 
 .modal__desc {
   font-family: 'gotham pro';
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .modal__rating {
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'gotham pro';
   font-weight: 700;
   padding: 20px 0;
@@ -266,15 +279,15 @@
 }
 
 .modal__rating span {
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'gotham pro';
   font-weight: 700;
   color: var(--color-accent-3);
 }
 
 .modal__inner {
-  padding-top: 10%;
-  min-height: 900px;
+  padding-top:calc((100vh - 740px)/2);
+  min-height: 760px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -300,6 +313,6 @@
 .modal__genre {
   font-family: 'gotham pro';
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
   color: var(--color-accent-3);
 }
