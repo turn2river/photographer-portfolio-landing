@@ -26,6 +26,7 @@ const popularURL = 'https://api.themoviedb.org/3/movie/popular?api_key=dd7331cca
 const searchAPI = 'https://api.themoviedb.org/3/search/movie?&api_key=dd7331cca3d42d6219e14ab06fd6d0b6&query=';
 const genreURL = 'https://api.themoviedb.org/3/genre/movie/list?api_key=dd7331cca3d42d6219e14ab06fd6d0b6&language=en-US';
 
+const body = document.querySelector('.body')
 const main = document.getElementById('main');
 const form = document.getElementById('form');
 const search = document.getElementById('search');
@@ -134,6 +135,7 @@ const renderModal = (details) => {
   const { backdrop_path, title, overview, vote_average, genres } = details;
   modal.classList.remove('hide');
   modal.classList.add('show');
+  body.classList.add('scroll-lock')
   modalIMG.src = urlIMG + backdrop_path;
 
   let genresList = '';
@@ -142,7 +144,7 @@ const renderModal = (details) => {
   const modalRender = document.createElement('div');
 
   modalRender.classList.add('modal__inner');
-  modalRender.classList.add('container');
+  modalRender.classList.add('modal-container');
   modalRender.innerHTML = `
     <img class="modal__img container" src="${modalIMG.src}" alt="" id="modal-img" >
     <h2 class="modal__title">${title}.</h2>
@@ -159,12 +161,14 @@ const renderModal = (details) => {
 window.addEventListener('click', () => {
   modal.classList.add('hide');
   modal.classList.remove('show');
+  body.classList.remove('scroll-lock')
 });
 
 window.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
     modal.classList.add('hide');
     modal.classList.remove('show');
+    body.classList.remove('scroll-lock')
   }
 });
 
