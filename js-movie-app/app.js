@@ -48,15 +48,10 @@ const getMovies = async (url) => {
   renderPromo(data.results);
 };
 
-const getGenres = async (url) => {
-  const response = await fetch(url);
-  const genres = await response.json();
-};
-
 const getDetails = async (url) => {
   const response = await fetch(url);
   const data = await response.json();
-  // console.log(data);
+  // console.log(data); 
 
   renderModal(data);
 };
@@ -96,9 +91,7 @@ const renderCards = (result) => {
       const id = e.childNodes[3].childNodes[3].textContent;
 
       const movieIdURL = `https://api.themoviedb.org/3/movie/${id}?api_key=dd7331cca3d42d6219e14ab06fd6d0b6&language=en-US`;
-      getDetails(movieIdURL);
-
-      //TODO: DISABLE SCROLL
+      getDetails(movieIdURL);      
     });
   });
 };
