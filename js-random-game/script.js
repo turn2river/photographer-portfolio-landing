@@ -1,3 +1,23 @@
+console.log(`
+1. Вёрстка +10
+  - реализован интерфейс игры +5
+  - в футере приложения есть ссылка на гитхаб автора приложения, год создания приложения, логотип курса со ссылкой на курс +5
+2. Логика игры. Ходы, перемещения фигур, другие действия игрока подчиняются определённым свойственным игре правилам +10
+3. Реализовано завершение игры при достижении игровой цели +10
+4. По окончанию игры выводится её результат, например, количество ходов, время игры, набранные баллы, выигрыш или поражение и т.д +10
+5.Результаты последних 10 игр сохраняются в local storage. Есть таблица рекордов, в которой сохраняются результаты предыдущих 10 игр +0
+6. Анимации или звуки, или настройки игры. Баллы начисляются за любой из перечисленных пунктов +10
+7. Очень высокое качество оформления приложения и/или дополнительный не предусмотренный в задании функционал, улучшающий качество приложения +10
+высокое качество оформления приложения предполагает собственное оригинальное оформление равное или отличающееся в лучшую сторону по сравнению с демо
+
+total 60/60
+
+`)
+
+
+
+
+
 window.addEventListener('load', function () {
   const canvas = this.document.getElementById('canvas-main');
   const ctx = canvas.getContext('2d');
@@ -27,13 +47,7 @@ window.addEventListener('load', function () {
 
   const startBtn = document.getElementById('start-btn');
   const reStartBtn = document.getElementById('restart-btn');
-  const muteBtn = document.querySelector('.mute')
-
-  muteBtn.addEventListener('click', () => {
-    if (audio.muted) {
-      audio.muted = false
-    } else { audio.muted = true }
-  })
+  const muteBtn = document.querySelector('.mute');
 
   function getLocalStorage() {
     if (localStorage.getItem('lang')) {
@@ -78,21 +92,14 @@ window.addEventListener('load', function () {
       this.speed = 0;
       this.vy = 0;
       this.gravity = 1;
-      // let playerCollisionX = this.x + 25;
-      // let playerCollisionY = this.x + 60;
-      // let playerCollisionWidth = this.width / 3;
-      // let playerCollisionHeight = this.height / 1.8;
     }
     draw(context) {
-      // context.fillStyle = 'transparent';
-      // collision modify
-      // context.strokeRect(this.x + 25, this.y + 60, this.width / 3, this.height / 1.8);
-      // context.strokeStyle = 'tomato';
       context.drawImage(this.image, this.frameX * this.width, this.frameY * this.height, this.width, this.height, this.x, this.y, this.width, this.height);
     }
     update(input, deltaTime, enemies) {
       //collision
       enemies.forEach((enemy) => {
+        // collision modify
         if (this.x + 25 < enemy.x + 40 + enemy.width / 2.8 && this.x + 25 + this.width / 3 > enemy.x + 40 && this.y + 60 < enemy.y + 50 + enemy.height - 25 && this.y + this.height / 1.8 > enemy.y + 50) {
           gameOver = true;
           reStartBtn.style.display = 'block';
@@ -208,9 +215,6 @@ window.addEventListener('load', function () {
       this.enemyDelete = false;
     }
     draw(context) {
-      // collision modify
-      // context.strokeRect(this.x + 40, this.y + 50, this.width / 2.8, this.height - 25);
-      // context.strokeStyle = 'tomato';
       context.drawImage(this.image, this.frameX * this.width, 0, this.width, this.height, this.x, this.y, this.width, this.height);
     }
     update(deltaTime) {
@@ -247,8 +251,6 @@ window.addEventListener('load', function () {
     enemies = enemies.filter((enemy) => !enemy.enemyDelete);
   }
 
-  function displayStatusText() {}
-
   const input = new InputHandler();
   const player = new Player(canvas.width, canvas.height);
   const background = new Background(canvas.width, canvas.height);
@@ -274,13 +276,32 @@ window.addEventListener('load', function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   }
 
+  function increaseDifficulty() {
+    if (enemyInterval > 100) {
+      enemyInterval -= 20;
+      globalSpeed = globalSpeed + 0.2;
+    } else {
+      globalSpeed = globalSpeed + 0.2;
+    }
+  }
+  function changeScoresArrayValues() {
+    if (scoresArray.length < 2) {
+      scoresArray.push(currentScore);
+      console.log(scoresArray);
+    } else {
+      scoresArray.pop();
+      scoresArray.push(currentScore);
+      console.log(scoresArray);
+    }
+  }
+
   startBtn.addEventListener('click', () => {
     clearCVS();
     if (gameOver) {
       gameOver = false;
       animate(0);
       startBtn.style.display = 'none';
-      
+
       audio.play();
       window.setTimeout(function () {
         audio.volume = 0.1;
@@ -307,22 +328,13 @@ window.addEventListener('load', function () {
     }
   });
 
-  function increaseDifficulty() {
-    if (enemyInterval > 100) {
-      enemyInterval -= 20;
-      globalSpeed = globalSpeed + 0.2;
+  muteBtn.addEventListener('click', () => {
+    if (audio.muted) {
+      audio.muted = false;
+      muteBtn.innerText = 'mute';
     } else {
-      globalSpeed = globalSpeed + 0.2;
+      audio.muted = true;
+      muteBtn.innerText = 'unmute';
     }
-  }
-  function changeScoresArrayValues() {
-    if (scoresArray.length < 2) {
-      scoresArray.push(currentScore);
-      console.log(scoresArray);
-    } else {
-      scoresArray.pop();
-      scoresArray.push(currentScore);
-      console.log(scoresArray);
-    }
-  }
+  });
 });
