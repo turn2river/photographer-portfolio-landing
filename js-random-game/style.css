@@ -15,8 +15,7 @@ body {
   justify-content:space-between;
   align-items: center;
   flex-direction: column;
-  height: calc(100vh - 10px);
-  /* width: 100vw; */
+  height: 98vh;
 }
 
 .main-game {
@@ -69,11 +68,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  outline: 4px solid white
-}
-
-button:active {
-  /* transform: translateY(+10%); */
+  outline: 2px solid white
 }
 
 .ui {
@@ -148,4 +143,16 @@ a:hover {
 
 .mute {
   font-size: 12px;
+  width: 120px;
+}
+
+.info {
+  margin-top: 20px;
+  padding: 16px;
+  font-size: 14px;
+  width: 960px;
+  max-height: 100px;
+  border: 2px solid tomato;
+  color: white;
+  text-align: center;
 }
